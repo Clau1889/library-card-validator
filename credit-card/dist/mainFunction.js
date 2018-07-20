@@ -10,11 +10,11 @@ var _compareFunctions2 = _interopRequireDefault(_compareFunctions);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// const valName = 'Claudia Montserrat Torres';
-// const numTDC = '4043800134371172';
-// const monthData = '05';
-// const yearData = '18';
-// const cvv = '568';
+var name = document.getElementById('name').value;
+var num = document.getElementById('cn').value;
+var month = document.getElementById('expMonth').value;
+var year = document.getElementById('expYear').value;
+var cvv = document.getElementById('cvv').value;
 
 var validateAllTDC = function validateAllTDC(name, num, month, year, cvv) {
     if (_validateFunctions2.default.validateName(name) && _validateFunctions2.default.validateNumTDC(num) && _validateFunctions2.default.expDateMonth(month) && _validateFunctions2.default.expDateYear(year) && _validateFunctions2.default.cvvVal(cvv)) {
@@ -27,4 +27,4 @@ var validateAllTDC = function validateAllTDC(name, num, month, year, cvv) {
     return false;
 };
 
-validateAllTDC('Claudia Montserrat Torres', '4043800134371172', '05', '18', '568');
+validateAllTDC(name, num, month, year, cvv);
