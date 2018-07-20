@@ -7,7 +7,138 @@ body {
 }
 
 form {
-    
+    background: -webkit-radial-gradient(center, ellipse cover, #cedce7 0%,#596a72 100%); Chrome10-25,Safari5.1-6 
+    border-radius: 10px;
+    font-family: 'Nanum Gothic', sans-serif;
     position: relative;
-    margin-left: 30%;
+    margin-left: 25%;
+    margin-top: 5%;
+    padding: 20px;
+    width: 40%;
+}
+
+.form-group {
+    margin-bottom: 5vh;
+}
+
+label {
+    display: block;
+}
+
+input {
+    border-radius: 5px;
+    display: block;
+    width: 500px;
+}
+
+#cn {
+    height: 4vh;
+}
+
+.cards {
+    width: 20%;
+}
+
+.date {
+    display: inline-flex;
+}
+
+#expMonth, #expYear {
+    width: 4em;
+}
+
+#cvv {
+    display: inline-block;
+    width: 3em;
+}
+
+.cvv {
+    display: inline-block;
+    float: right;
+    width: 30%;   
+}
+
+#name {
+    height: 4vh;
+}
+
+#button {
+    background-color: #e6cbd2;
+    color: white;
+    display: inline-block;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 2em;
+    float: right;
+    margin-right: 15px;
+    padding: 3%;
+}
+
+.foot {
+    display: inline-block;
+}
+
+.lab {
+    vertical-align: middle;
+    width: 15%;
+}
+
+@media (max-width: 376px) {
+    body {
+        background-image: url("../assets/images/banner.jpg");
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    form {
+        background: -webkit-radial-gradient(center, ellipse cover, #cedce7 0%,#596a72 100%); Chrome10-25,Safari5.1-6 
+        border-radius: 10px;
+        font-family: 'Nanum Gothic', sans-serif;
+        height: 90%;
+        position: relative;
+        margin-left: 5%;
+        margin-top: 25%;
+        padding: 5px;
+        width: 90%;
+    }
+    input {
+        border-radius: 5px;
+        display: block;
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 678px) {
+    body {
+        background-image: url("../assets/images/banner.jpg");
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    form {
+        background: -webkit-radial-gradient(center, ellipse cover, #cedce7 0%,#596a72 100%); Chrome10-25,Safari5.1-6 
+        border-radius: 10px;
+        font-family: 'Nanum Gothic', sans-serif;
+        height: 420px;
+        position: relative;
+        margin-left: 5%;
+        margin-top: 25%;
+        padding: 5px;
+        width: 90%;
+    }
+    input {
+        border-radius: 5px;
+        display: block;
+        width: 250px;
+    }
+
+    .cvv {
+        display: inline-block;
+        float: right;
+        margin-bottom: 30%;
+        width: 30%;   
+    }
 }
