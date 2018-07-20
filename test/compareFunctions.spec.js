@@ -1,0 +1,1 @@
+const fun = require('../credit-card/dist/compareFunctions');
