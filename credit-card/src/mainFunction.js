@@ -1,11 +1,11 @@
 import  validateFunctions from './validateFunctions';
 import  compareFunctions from './compareFunctions';
 
-// const valName = 'Claudia Montserrat Torres';
-// const numTDC = '4043800134371172';
-// const monthData = '05';
-// const yearData = '18';
-// const cvv = '568';
+const name = document.getElementById('name').value;
+const num = document.getElementById('cn').value;
+const month = document.getElementById('expMonth').value;
+const year = document.getElementById('expYear').value;
+const cvv = document.getElementById('cvv').value;
 
 const validateAllTDC = (name, num, month, year, cvv) => {
     if (validateFunctions.validateName(name) && validateFunctions.validateNumTDC(num) && validateFunctions.expDateMonth(month) && validateFunctions.expDateYear(year) && validateFunctions.cvvVal(cvv)) { 
@@ -18,5 +18,5 @@ const validateAllTDC = (name, num, month, year, cvv) => {
         return false;
 };
 
-validateAllTDC('Claudia Montserrat Torres','4043800134371172', '05', '18', '568' );
+validateAllTDC(name, num, month, year, cvv);
 

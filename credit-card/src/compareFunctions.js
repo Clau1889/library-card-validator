@@ -7,11 +7,11 @@ compareFunctions.compareUserName = fullName => {
 
     for (j; j < data.dataClients.length; j += 1) {
         if (data.dataClients[j].name === fullName) {
-            console.log('El nombre fue encontrado en la posicion ' + [j]);
+            // console.log('El nombre fue encontrado en la posicion ' + [j]);
             return true;
         }
     }
-    console.log('nombre no encontrado');
+    // console.log('nombre no encontrado');
     return false;
 };
 
@@ -23,11 +23,11 @@ compareFunctions.compareUserNumTDC = fullNumTDC => {
 
     for (i; i < data.dataClients.length; i += 1) {
         if (data.dataClients[i].numberCard === fullNumTDC) {
-            console.log('En esta posicion el numero de tarjeta fue encontrada' + [i])
+            // console.log('En esta posicion el numero de tarjeta fue encontrada' + [i])
             return true;
         } 
     }
-    console.log('numero de tarjeta no encontrado');
+    // console.log('numero de tarjeta no encontrado');
     return false;
 };
 
@@ -40,7 +40,7 @@ compareFunctions.compareMonth = month => {
 
     for (j; j < data.dataClients.length; j += 1) {
         if (data.dataClients[j].month === month) {
-            console.log('Month de expiración fue encontrada en la posicion ' + [j]);
+            // console.log('Month de expiración fue encontrada en la posicion ' + [j]);
             return true;
         } 
     }
@@ -52,11 +52,11 @@ compareFunctions.compareYear = year => {
 
     for (j; j < data.dataClients.length; j += 1) {
         if (data.dataClients[j].year === year) {
-            console.log('Year de expiración fue encontrada en la posicion ' + [j]);
+            // console.log('Year de expiración fue encontrada en la posicion ' + [j]);
             return true;
         } 
     }
-    console.log('La fecha no fue encontrada');
+    // console.log('La fecha no fue encontrada');
     return false;
 }
 
@@ -66,11 +66,11 @@ compareFunctions.compareUserCvv = cvvDigits => {
 
     for (j; j < data.dataClients.length; j += 1) {
         if (data.dataClients[j].cvv === cvvDigits) {
-            console.log('El cvv fue encontrado en la posicion ' + [j]);
+            // console.log('El cvv fue encontrado en la posicion ' + [j]);
             return true;
         }
     }
-    console.log('cvv no encontrado');
+    // console.log('cvv no encontrado');
     return false;
 }
 module.exports=compareFunctions;

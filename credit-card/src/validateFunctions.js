@@ -4,10 +4,10 @@ const validateFunctions= {};
 validateFunctions.validateName = name => {
     const regEx = /^([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\']+[\s])+([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\'])+[\s]?([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\'])?$/g;
     if (regEx.exec(name) == null) {
-        console.log('NOMBRE INVALIDO');
+        // console.log('NOMBRE INVALIDO');
         return false;
     } 
-        console.log('NOMBRE VALIDO');
+        // console.log('NOMBRE VALIDO');
         return true;
 };
 
@@ -59,10 +59,10 @@ const validateNumTDCluhn = numeros => {
     }
 
     if (sumTotalDigits % 10 == 0) {
-        console.log('TARJETA VALIDA');
+        // console.log('TARJETA VALIDA');
         return true;
     } else {
-        console.log('TARJETA INVALIDA');
+        // console.log('TARJETA INVALIDA');
         return false;
     }
 };
@@ -73,10 +73,10 @@ validateFunctions.expDateMonth = month => {
     const datExpRegEx = /^(0[0-9]|1[0-2])$/;
 
     if (datExpRegEx.exec(month) == null) {
-        console.log('mes de expiración erronea');
+        // console.log('mes de expiración erronea');
         return false;
     } 
-        console.log('mes de expiración válida');
+        // console.log('mes de expiración válida');
         return true;
 };
 
@@ -86,10 +86,10 @@ validateFunctions.expDateYear = year => {
     const datExpRegEx = /^(20)?([0-9]{2})$/;
 
     if (datExpRegEx.exec(year) == null) {
-        console.log('year de expiración erronea');
+        // console.log('year de expiración erronea');
         return false;
     }
-        console.log('year de expiración válida');
+        // console.log('year de expiración válida');
         return true;
 };
 
@@ -98,10 +98,10 @@ validateFunctions.expDateYear = year => {
 validateFunctions.cvvVal = securityCode => {
     const cvvRegEx = /^[0-9]{3}$/;///^d{2}$/;//(/\D/g, ""/);
     if (cvvRegEx.exec(securityCode) == null) {
-        console.log('número de seguridad inválido');
+        // console.log('número de seguridad inválido');
         return false;
     }
-        console.log('número de seguridad válido');
+        // console.log('número de seguridad válido');
         return true;
 }
 
