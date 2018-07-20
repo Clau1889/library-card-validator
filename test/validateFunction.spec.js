@@ -29,5 +29,47 @@ describe('validateFunctions()',() => {
             console.log('✓ok');  
         }
     })
+    it('debería de devolver mes válido(05)', () =>{
+        if(validate.expDateMonth('05') !==true) {
+            console.error('✗ fail');
+        } else {
+            console.log('✓ok');            
+        }
+    })
+    it('debería devolver mes no válido(0l)',() => {
+        if(validate.expDateMonth('0l') !==true) {
+            console.error('✗ fail');
+        } else {
+            console.log('✓ok');  
+        }
+    })
+    it('debería de devolver año válido(18)', () =>{
+        if(validate.expDateYear('18') !==true) {
+            console.error('✗ fail');
+        } else {
+            console.log('✓ok');            
+        }
+    })
+    it('debería devolver año no válido(1B)',() => {
+        if(validate.expDateYear('1B') !==true) {
+            console.error('✗ fail');
+        } else {
+            console.log('✓ok');  
+        }
+    })
+    it('debería de devolver número de verificación válido(568)', () =>{
+        if(validate.cvvVal('568') !==true) {
+            console.error('✗ fail');
+        } else {
+            console.log('✓ok');            
+        }
+    })
+    it('debería devolver número de verificación no válido(5689)',() => {
+        if(validate.cvvVal('5689') !==true) {
+            console.error('✗ fail');
+        } else {
+            console.log('✓ok');  
+        }
+    })
 
 });
