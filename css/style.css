@@ -1,0 +1,13 @@
+body {
+    background-image: url("../assets/images/shopping.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+form {
+    
+    position: relative;
+    margin-left: 30%;
+}

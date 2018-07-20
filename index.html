@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div class="form-group">
+          <label for="cn">Número de tarjeta</label>
+          <input id="cn" name="cn" />
+        </div>
+        <div class="form-group">
+          <label for="exp">Fecha de vencimiento</label>
+          <input id="expMonth" name="exp" placeholder="month"/>
+          <span>/</span>
+          <input id="expYear" name="exp" placeholder="year"/>
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input id="cvv" name="cvv" />
+        </div>
+        <div class="form-group">
+          <label for="name">Nombre completo</label>
+          <input id="name" name="name" />
+        </div>
+        <input type="submit" value="Pagar" />
+      </form>
+
+      <script src="functionsCreditCard.mjs"></script>
+</body>
+</html>
