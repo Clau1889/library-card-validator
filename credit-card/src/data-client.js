@@ -1,4 +1,4 @@
-export const dataClients = [
+const dataClients = [
         {
             'name': 'Erika Estrada',
             'numberCard': '4571612553847958',
@@ -36,6 +36,15 @@ export const dataClients = [
         },
 
     ];
+
+    if (typeof window == "undefined") {
+        console.log('estamos en consola');
+        module.exports = dataClients;
+    } else {
+        console.log('navegador');
+        window.dataClients= dataClients;
+    };
+    
 
 
 

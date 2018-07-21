@@ -1,44 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <form>
-      <hr>
-        <div class="form-group">
-          <label for="cn">Número de tarjeta</label>
-          <input id="cn" name="cn"/>
-          <img class="cards" src="assets/images/visa_master.png" alt="Tarjetas">
-        </div>
-        <div class="form-group">
-          <label for="exp">Fecha de vencimiento</label>
-          <div class="date">
-            <div> <input id="expMonth" name="exp" placeholder="month"/></div>
-            <div><span>/</span></div>
-          <div> 
-            <input id="expYear" name="exp" placeholder="year"/></div>
-        </div>
-        </div>
-        <div class="form-group">
-          <label for="cvv">CVV</label>
-          <input id="cvv" name="cvv" />
-          <img class="cvv" src="assets/images/infocvv.png" alt="">
-        </div>
-        <div class="form-group">
-          <label for="name">Nombre completo</label>
-          <input id="name" name="name" />
-        </div>        
-        <hr> 
-        <input id = "button" type="submit" value="Pagar" />
-        <center><span class="foot" >Desarrollado por<img class="lab" src="assets/images/laboratoria.png" alt=""></span> </center>         
-      </form>
 
-      
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <hr>
+    <div class="form-group">
+      <label for="cn">Número de tarjeta</label>
+      <input id="cn" name="cn" placeholder="16 digits"/>
+      <img class="cards" src="assets/images/visa_master.png" alt="Tarjetas">
+    </div>
+    <div class="form-group">
+      <label for="exp">Fecha de vencimiento</label>
+      <div class="date">
+        <div>
+          <input id="expMonth" name="exp" placeholder="month" />
+        </div>
+        <div>
+          <span>/</span>
+        </div>
+        <div>
+          <input id="expYear" name="exp" placeholder="year" />
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="cvv">CVV</label>
+      <input id="cvv" name="cvv" placeholder="3 digits"/>
+      <img class="cvv" src="assets/images/infocvv.png" alt="">
+    </div>
+    <div class="form-group">
+      <label for="name">Nombre completo</label>
+      <input id="name" name="name" placeholder="full name with space" />
+    </div>
+    <hr>
+    <input id="button" type="submit" value="Pagar" />
+    <center>
+      <span class="foot">Desarrollado por
+        <img class="lab" src="assets/images/laboratoria.png" alt="">
+      </span>
+    </center>
+  </form>
+
+  <script src="credit-card/dist/data-client.js"></script>
+  <script src="credit-card/dist/validateFunctions.js"></script>
+  <script src="credit-card/dist/compareFunctions.js"></script>
+  <script src="credit-card/dist/mainFunction.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>

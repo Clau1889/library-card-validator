@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var validateFunctions = {};
 
@@ -6,10 +6,10 @@ var validateFunctions = {};
 validateFunctions.validateName = function (name) {
     var regEx = /^([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\']+[\s])+([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\'])+[\s]?([A-Za-zÁÉÍÓÚñáéíóúÑ]{0}?[A-Za-zÁÉÍÓÚñáéíóúÑ\'])?$/g;
     if (regEx.exec(name) == null) {
-        // console.log('NOMBRE INVALIDO');
+        console.log('NOMBRE INVALIDO');
         return false;
     }
-    // console.log('NOMBRE VALIDO');
+    console.log('NOMBRE VALIDO');
     return true;
 };
 
@@ -59,10 +59,10 @@ var validateNumTDCluhn = function validateNumTDCluhn(numeros) {
     }
 
     if (sumTotalDigits % 10 == 0) {
-        // console.log('TARJETA VALIDA');
+        console.log('TARJETA VALIDA (luhn)');
         return true;
     } else {
-        // console.log('TARJETA INVALIDA');
+        console.log('TARJETA INVALIDA (luhn)');
         return false;
     }
 };
@@ -72,10 +72,10 @@ validateFunctions.expDateMonth = function (month) {
     var datExpRegEx = /^(0[0-9]|1[0-2])$/;
 
     if (datExpRegEx.exec(month) == null) {
-        // console.log('mes de expiración erronea');
+        console.log('mes de expiración erronea');
         return false;
     }
-    // console.log('mes de expiración válida');
+    console.log('mes de expiración válida');
     return true;
 };
 
@@ -84,10 +84,10 @@ validateFunctions.expDateYear = function (year) {
     var datExpRegEx = /^(20)?([0-9]{2})$/;
 
     if (datExpRegEx.exec(year) == null) {
-        // console.log('year de expiración erronea');
+        console.log('year de expiración erronea');
         return false;
     }
-    // console.log('year de expiración válida');
+    console.log('year de expiración válida');
     return true;
 };
 
@@ -95,11 +95,17 @@ validateFunctions.expDateYear = function (year) {
 validateFunctions.cvvVal = function (securityCode) {
     var cvvRegEx = /^[0-9]{3}$/; ///^d{2}$/;//(/\D/g, ""/);
     if (cvvRegEx.exec(securityCode) == null) {
-        // console.log('número de seguridad inválido');
+        console.log('número de seguridad inválido');
         return false;
     }
-    // console.log('número de seguridad válido');
+    console.log('número de seguridad válido');
     return true;
 };
 
-module.exports = validateFunctions;
+if (typeof window == "undefined") {
+    console.log('estamos en consola');
+    module.exports = validateFunctions;
+} else {
+    console.log('navegador');
+    window.validateFunctions = validateFunctions;
+}

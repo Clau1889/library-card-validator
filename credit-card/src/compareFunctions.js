@@ -1,62 +1,59 @@
-const compareFunctions={};
-import * as data from './data-client';
+const compareFunctions = {};
+
+if (typeof window === 'undefined') {
+
+    const dataClients = require('./data-client');
+
+}
 
 /*************FUNCION PARA NAME************************/
 compareFunctions.compareUserName = fullName => {
     let j = 0;
 
-    for (j; j < data.dataClients.length; j += 1) {
-        if (data.dataClients[j].name === fullName) {
-            // console.log('El nombre fue encontrado en la posicion ' + [j]);
+    for (j; j < dataClients.length; j += 1) {
+        if (dataClients[j].name === fullName) {
             return true;
         }
     }
-    // console.log('nombre no encontrado');
+    console.log('nombre no encontrado');
     return false;
 };
 
 /*************FUNCION PARA NUMERO************************/
 compareFunctions.compareUserNumTDC = fullNumTDC => {
-    // validateNumTDC(fullNumTDC);
-
     let i = 0;
 
-    for (i; i < data.dataClients.length; i += 1) {
-        if (data.dataClients[i].numberCard === fullNumTDC) {
-            // console.log('En esta posicion el numero de tarjeta fue encontrada' + [i])
+    for (i; i < dataClients.length; i += 1) {
+        if (dataClients[i].numberCard === fullNumTDC) {
             return true;
-        } 
+        }
     }
-    // console.log('numero de tarjeta no encontrado');
+    console.log('numero de tarjeta no encontrado');
     return false;
 };
 
 /*************FUNCION PARA EXPDATE************************/
 compareFunctions.compareMonth = month => {
-    // validacion.expDateMonth(month);
-    // validacion.expDateYear(year);
-
     let j = 0;
 
-    for (j; j < data.dataClients.length; j += 1) {
-        if (data.dataClients[j].month === month) {
-            // console.log('Month de expiración fue encontrada en la posicion ' + [j]);
+    for (j; j < dataClients.length; j += 1) {
+        if (dataClients[j].month === month) {
             return true;
-        } 
+        }
     }
+    console.log('Mes no encontrado');
     return false;
 }
 
 compareFunctions.compareYear = year => {
     let j = 0;
 
-    for (j; j < data.dataClients.length; j += 1) {
-        if (data.dataClients[j].year === year) {
-            // console.log('Year de expiración fue encontrada en la posicion ' + [j]);
+    for (j; j < dataClients.length; j += 1) {
+        if (dataClients[j].year === year) {
             return true;
-        } 
+        }
     }
-    // console.log('La fecha no fue encontrada');
+    console.log('La fecha no fue encontrada');
     return false;
 }
 
@@ -64,15 +61,23 @@ compareFunctions.compareYear = year => {
 compareFunctions.compareUserCvv = cvvDigits => {
     let j = 0;
 
-    for (j; j < data.dataClients.length; j += 1) {
-        if (data.dataClients[j].cvv === cvvDigits) {
-            // console.log('El cvv fue encontrado en la posicion ' + [j]);
+    for (j; j < dataClients.length; j += 1) {
+        if (dataClients[j].cvv === cvvDigits) {
             return true;
         }
     }
-    // console.log('cvv no encontrado');
+    console.log('cvv no encontrado');
     return false;
 }
-module.exports=compareFunctions;
+
+
+if (typeof window == "undefined") {
+    console.log('estamos en consola');
+    module.exports = compareFunctions;
+} else {
+    console.log('navegador');
+    window.compareFunctions = compareFunctions;
+};
+
 
 
