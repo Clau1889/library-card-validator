@@ -24,7 +24,7 @@ pay.addEventListener('click', function (e) {
     validateAllTDC(name, num, month, year, cvv);
 
     if (validateAllTDC(name, num, month, year, cvv) !== true) {
-        alert('TARJETA RECHAZADA');
+        alert('TARJETA RECHAZADA. El pago no pudo ser realizado. /t Favor de verificar tus datos de ingreso');
     } else {
         alert('PAGO EXITOSO');
     }
