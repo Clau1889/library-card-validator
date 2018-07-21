@@ -2,11 +2,14 @@ if (typeof window === 'undefined') {
 
     const validateFunctions = require('./validateFunctions');
     const compareFunctions = require('./compareFunctions');
+    const getData = require('./dataClients');
 
 }
 
 
-const validateAllTDC = (name, num, month, year, cvv) => {
+const validateAllTDC = (name, num, month, year, cvv, dataClients) => {
+    compareFunctions.sentData(dataClients);
+
     if (validateFunctions.validateName(name) && validateFunctions.validateNumTDC(num) && validateFunctions.expDateMonth(month) && validateFunctions.expDateYear(year) && validateFunctions.cvvVal(cvv)) {
         // console.log("Tarjeta si valida");
     } if (compareFunctions.compareUserName(name) && compareFunctions.compareUserNumTDC(num) && compareFunctions.compareMonth(month) && compareFunctions.compareYear(year) && compareFunctions.compareUserCvv(cvv)) {

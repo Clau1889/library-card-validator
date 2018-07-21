@@ -2,17 +2,18 @@
 
 var compareFunctions = {};
 
-if (typeof window === 'undefined') {
+compareFunctions.dataClients = {};
 
-    var _dataClients = require('./data-client');
-}
+compareFunctions.sentData = function (getData) {
+    compareFunctions.dataClients = getData;
+};
 
 /*************FUNCION PARA NAME************************/
 compareFunctions.compareUserName = function (fullName) {
     var j = 0;
 
-    for (j; j < dataClients.length; j += 1) {
-        if (dataClients[j].name === fullName) {
+    for (j; j < compareFunctions.dataClients.length; j += 1) {
+        if (compareFunctions.dataClients[j].name === fullName) {
             return true;
         }
     }
@@ -24,8 +25,8 @@ compareFunctions.compareUserName = function (fullName) {
 compareFunctions.compareUserNumTDC = function (fullNumTDC) {
     var i = 0;
 
-    for (i; i < dataClients.length; i += 1) {
-        if (dataClients[i].numberCard === fullNumTDC) {
+    for (i; i < compareFunctions.dataClients.length; i += 1) {
+        if (compareFunctions.dataClients[i].numberCard === fullNumTDC) {
             return true;
         }
     }
@@ -37,8 +38,8 @@ compareFunctions.compareUserNumTDC = function (fullNumTDC) {
 compareFunctions.compareMonth = function (month) {
     var j = 0;
 
-    for (j; j < dataClients.length; j += 1) {
-        if (dataClients[j].month === month) {
+    for (j; j < compareFunctions.dataClients.length; j += 1) {
+        if (compareFunctions.dataClients[j].month === month) {
             return true;
         }
     }
@@ -49,8 +50,8 @@ compareFunctions.compareMonth = function (month) {
 compareFunctions.compareYear = function (year) {
     var j = 0;
 
-    for (j; j < dataClients.length; j += 1) {
-        if (dataClients[j].year === year) {
+    for (j; j < compareFunctions.dataClients.length; j += 1) {
+        if (compareFunctions.dataClients[j].year === year) {
             return true;
         }
     }
@@ -62,8 +63,8 @@ compareFunctions.compareYear = function (year) {
 compareFunctions.compareUserCvv = function (cvvDigits) {
     var j = 0;
 
-    for (j; j < dataClients.length; j += 1) {
-        if (dataClients[j].cvv === cvvDigits) {
+    for (j; j < compareFunctions.dataClients.length; j += 1) {
+        if (compareFunctions.dataClients[j].cvv === cvvDigits) {
             return true;
         }
     }

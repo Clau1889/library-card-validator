@@ -4,9 +4,12 @@ if (typeof window === 'undefined') {
 
     var _validateFunctions = require('./validateFunctions');
     var _compareFunctions = require('./compareFunctions');
+    var getData = require('./dataClients');
 }
 
-var validateAllTDC = function validateAllTDC(name, num, month, year, cvv) {
+var validateAllTDC = function validateAllTDC(name, num, month, year, cvv, dataClients) {
+    compareFunctions.sentData(dataClients);
+
     if (validateFunctions.validateName(name) && validateFunctions.validateNumTDC(num) && validateFunctions.expDateMonth(month) && validateFunctions.expDateYear(year) && validateFunctions.cvvVal(cvv)) {
         // console.log("Tarjeta si valida");
     }if (compareFunctions.compareUserName(name) && compareFunctions.compareUserNumTDC(num) && compareFunctions.compareMonth(month) && compareFunctions.compareYear(year) && compareFunctions.compareUserCvv(cvv)) {

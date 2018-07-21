@@ -1,5 +1,5 @@
 {
-  "name": "card-validator-1",
+  "name": "credit-card-validator",
   "version": "1.0.0",
   "description": "* **Colaboradoras** _Claudia Trujillo, Sandra Pantoja_\r * **Curso:** _JS Deep Dive: Crea tu propia librería usando JavaScript_\r * **Unidad:** _Sprint 4_",
   "main": "data-client.js",
@@ -7,9 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "build": "./node_modules/.bin/babel credit-card/src --out-dir credit-card/dist"
   },
-  "author": "",
+  "author": "Sandra Pantoja <>, Claudia Blanco <clau.blanco1889@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.26.0",
