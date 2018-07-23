@@ -12,7 +12,7 @@ pay.addEventListener('click', function (e) {
 
 
     if (validateAllTDC(name, num, month, year, cvv, dataClients) !== true) {
-        alert('TARJETA RECHAZADA. El pago no pudo ser realizado. /t Favor de verificar tus datos de ingreso');
+        alert('TARJETA RECHAZADA. El pago no pudo ser realizado. Favor de verificar tus datos de ingreso');
     } else {
         alert('PAGO EXITOSO');
     }
