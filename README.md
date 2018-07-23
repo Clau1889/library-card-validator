@@ -41,43 +41,59 @@ El validador sólo acepta tarjetas Visa y Master Card; **Visa**, empiezan con n�
 
 ![validador](assets/images/demo.gif)
 
+## Instalar librería
+
+```npm install credit-card-validator```
+
 ## Ejemplo
 
 ```html
 <form>
-  <div class="form-group">
-    <label for="cn">Número de tarjeta</label>
-    <input id="cn" name="cn" />
-  </div>
-  <div class="form-group">
-    <label for="exp">Fecha de vencimiento</label>
-    <input id="exp" name="exp" />
-  </div>
-  <div class="form-group">
-    <label for="cvv">CVV</label>
-    <input id="cvv" name="cvv" />
-  </div>
-  <div class="form-group">
-    <label for="name">Nombre completo</label>
-    <input id="name" name="name" />
-  </div>
-  <input type="submit" value="Pagar" />
-</form>
+      <hr>
+        <div class="form-group">
+          <label for="cn">Número de tarjeta</label>
+          <input id="cn" name="cn"/>
+          <img class="cards" src="assets/images/visa_master.png" alt="Tarjetas">
+        </div>
+        <div class="form-group">
+          <label for="exp">Fecha de vencimiento</label>
+          <div class="date">
+            <div> <input id="expMonth" name="exp" placeholder="month"/></div>
+            <div><span>/</span></div>
+          <div> 
+            <input id="expYear" name="exp" placeholder="year"/></div>
+        </div>
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input id="cvv" name="cvv" />
+          <img class="cvv" src="assets/images/infocvv.png" alt="">
+        </div>
+        <div class="form-group">
+          <label for="name">Nombre completo</label>
+          <input id="name" name="name" />
+        </div>        
+        <hr> 
+        <input id = "button" type="submit" value="Pagar" />
+        <center><span class="foot" >Desarrollado por<img class="lab" src="assets/images/laboratoria.png" alt=""></span> </center>         
+      </form>
 ```
 
 ```js
-const form = document.querySelector('form');
+const validateAllTDC = (name, num, month, year, cvv, dataClients) => {
+    compareFunctions.sentData(dataClients);
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  if (validateCardDetails(form)) {
-    console.log('datos válido... enviar...');
-  } else {
-    console.log('datos inválidos');
-  }
-});
+    if (validateFunctions.validateName(name) && validateFunctions.validateNumTDC(num) && validateFunctions.expDateMonth(month) && validateFunctions.expDateYear(year) && validateFunctions.cvvVal(cvv)) {
+        // console.log("Tarjeta si valida");
+    } if (compareFunctions.compareUserName(name) && compareFunctions.compareUserNumTDC(num) && compareFunctions.compareMonth(month) && compareFunctions.compareYear(year) && compareFunctions.compareUserCvv(cvv)) {
+        console.log("Tarjeta valida para pagar");
+        return true;
+    }
+    console.log("TARJETA NO VALIDA");
+    return false;
+};
 ```
 
-A la hora de hacer las validaciones, la librería debería de añadir la clase
-`.error` a los `<input>`s que no pasen la validación, o la clase `.success`
+A la hora de hacer las validaciones, la librería debería de lanzar un alert:
+`TARJETA RECHAZADA. El pago no pudo ser realizado. /t Favor de verificar tus datos de ingreso` cuando los `<input>` no pasen la validación, o el alert `PAGO EXITOSO`
 en caso de que sí pase.

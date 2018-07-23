@@ -82,7 +82,7 @@ input {
     width: 15%;
 }
 
-@media (max-width: 376px) {
+@media (max-width: 768px) {
     body {
         background-image: url("../assets/images/banner.jpg");
         background-position: center;
@@ -122,7 +122,7 @@ input {
         background: -webkit-radial-gradient(center, ellipse cover, #cedce7 0%,#596a72 100%); Chrome10-25,Safari5.1-6 
         border-radius: 10px;
         font-family: 'Nanum Gothic', sans-serif;
-        height: 420px;
+        height: 500px;
         position: relative;
         margin-left: 5%;
         margin-top: 25%;
