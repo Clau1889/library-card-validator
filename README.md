@@ -4,6 +4,7 @@
 * **Curso:** _JS Deep Dive: Crea tu propia librería usando JavaScript_
 * **Unidad:** _Sprint 4_
 
+![image](https://user-images.githubusercontent.com/37419350/45052782-ab6fc780-b04d-11e8-9a6d-aee0f15aa81d.png)
 ***
 
 El validador de datos de tarjeta de crédito proporciona utilidades de validación para las entradas de datos de la tarjeta de crédito. Está diseñado como un módulo CommonJS para usar en Node.js, o el navegador. Presenta una interfaz de usuario adecuada al mismo.
