@@ -3,7 +3,7 @@
 * **Colaboradoras** _Claudia Trujillo, Sandra Pantoja_
 * **Curso:** _JS Deep Dive: Crea tu propia librería usando JavaScript_
 * **Unidad:** _Sprint 4_
-* **Desarrollado para**: Laboratoria [http://laboratoria.la]
+## Desarrollado para [Laboratoria](http://laboratoria.la)
 
 ![image](https://user-images.githubusercontent.com/37419350/45052782-ab6fc780-b04d-11e8-9a6d-aee0f15aa81d.png)
 ***
